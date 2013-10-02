@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" 
+		xmlns:mx="library://ns.adobe.com/flex/mx"
+		height="305">
+	
+	<s:Rect id="background" left="0" right="0" top="0" bottom="0">
+		<s:fill>
+			<s:LinearGradient rotation="90">
+				<s:GradientEntry color="#999999" />
+				<s:GradientEntry color="#666666" />
+			</s:LinearGradient>
+		</s:fill>
+	</s:Rect>
+	
+	<s:VGroup 
+		horizontalAlign="center" 
+		horizontalCenter="0" 
+		paddingBottom="10"
+		>
+		
+		<s:List 
+			id="listComponent" 
+			contentBackgroundAlpha="1" 
+			borderAlpha="0"
+			itemRenderer="com.chappell.view.renderers.GenericItemRenderer"
+			width="200" 
+			height="300" 
+			/>
+		
+	</s:VGroup>
+	
+	
+</s:Skin>

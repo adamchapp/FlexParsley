@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SkinnableContainer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					  xmlns:s="library://ns.adobe.com/flex/spark" 
+					  xmlns:mx="library://ns.adobe.com/flex/mx"
+					  xmlns:presentation="com.chappelltime.model.presentation.*"
+					  xmlns="http://www.spicefactory.org/parsley"
+					  >
+	
+	<fx:Declarations>
+		<Configure />
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import com.chappell.model.presentation.IPresentationModel;
+			
+			import spark.components.List;
+			import spark.events.IndexChangeEvent;
+			
+			[SkinPart(required="true")]
+			public var listComponent : List;
+			
+			private var _model : IPresentationModel;
+			
+			[Inject]
+			[Bindable]
+			public function get model() : IPresentationModel
+			{
+				return _model;
+			}
+			
+			public function set model( value : IPresentationModel ) : void
+			{
+				if ( !value || _model == value ) return;
+				
+				_model = value;
+				_model.addEventListener("modelUpdated", handleModelUpdateEvent);
+			}
+			
+			override protected function getCurrentSkinState():String
+			{
+				return currentState;
+			}
+			
+			override protected function partAdded(partName:String, instance:Object):void {
+				
+				super.partAdded(partName, instance);
+				
+				if ( instance == listComponent ) {
+					listComponent.addEventListener( IndexChangeEvent.CHANGE, handleIndexChangeEvent );
+				}
+			}
+			
+			override protected function partRemoved(partName:String, instance:Object):void {
+				if ( instance == listComponent ) {
+					listComponent.removeEventListener( IndexChangeEvent.CHANGE, handleIndexChangeEvent );
+				}
+				
+				super.partRemoved(partName, instance);
+			}
+			
+			protected function handleModelUpdateEvent(event:Event):void
+			{	
+				listComponent.dataProvider = model.dataProvider;
+			}			
+			
+			protected function handleIndexChangeEvent(event:IndexChangeEvent):void
+			{
+				model.selectItem( event.newIndex );
+			}
+			
+		]]>
+	</fx:Script>
+	
+</s:SkinnableContainer>

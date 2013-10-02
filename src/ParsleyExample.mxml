@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:parsley="http://www.spicefactory.org/parsley"
+			   minWidth="955" minHeight="600" xmlns:view="com.chappell.view.*">
+	<fx:Script>
+		<![CDATA[
+			import com.chappell.context.CoreServicesContext;
+			
+			import mx.logging.LogEventLevel;
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<parsley:ContextBuilder>
+			<parsley:FlexConfig type="{ CoreServicesContext }" />
+		</parsley:ContextBuilder>
+		
+		<s:TraceTarget 
+			includeCategory="true" 
+			includeLevel="true" 
+			includeTime="true"
+			level="{LogEventLevel.INFO}"
+			>
+			<s:filters>
+				<fx:String>com.chappell.*</fx:String>
+				<!--<fx:String>org.spicefactory.parsley.*</fx:String>-->
+			</s:filters>
+		</s:TraceTarget>
+	</fx:Declarations>
+	
+	<s:HGroup>
+	
+		<s:ModuleLoader url="com/chappell/modules/EmployeeModule.swf" />
+		
+		<s:ModuleLoader url="com/chappell/modules/DogModule.swf" />
+				
+	</s:HGroup>
+	
+</s:Application>

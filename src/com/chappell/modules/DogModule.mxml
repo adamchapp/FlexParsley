@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Module xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx" 
+		  xmlns:parsley="http://www.spicefactory.org/parsley" 
+		  xmlns:view="com.chappell.view.*">
+	
+	<fx:Script>
+		<![CDATA[
+			import com.chappell.context.DogCommandsContext;
+			import com.chappell.context.DogViewContext;
+			
+			import org.spicefactory.lib.logging.LogContext;
+			import org.spicefactory.lib.logging.Logger;
+			import org.spicefactory.parsley.flex.tag.builder.FlexContextEvent;
+			
+			public static const LOG : Logger = LogContext.getLogger( DogModule );
+			
+			protected function completeHandler(event:FlexContextEvent):void
+			{
+				LOG.info('Dog module context loaded');
+			}
+			
+		]]>
+	</fx:Script>
+
+	<fx:Declarations>
+
+		<parsley:ContextBuilder complete="completeHandler(event)">
+			<parsley:FlexConfig type="{ DogCommandsContext }" />
+			<parsley:FlexConfig type="{ DogViewContext }" />
+		</parsley:ContextBuilder>	
+		
+	</fx:Declarations>
+	
+	<view:GenericListView />
+	
+</s:Module>

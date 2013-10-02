@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parsley:Objects xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			xmlns:s="library://ns.adobe.com/flex/spark" 
+			xmlns:mx="library://ns.adobe.com/flex/mx"  
+		    xmlns:parsley="http://www.spicefactory.org/parsley">
+	
+	<fx:Script>
+		<![CDATA[
+			import com.chappell.model.domain.DogModel;
+			import com.chappell.model.domain.EmployeeModel;
+			import com.chappell.remote.RemoteObjectDataService;
+			import com.chappell.remote.StubServiceConfig;
+			
+			import mx.rpc.remoting.test.RemoteObjectStub;
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		
+		<parsley:Object type="{ StubServiceConfig }" />
+					
+		<parsley:Object type="{ RemoteObjectDataService }" />
+		
+		<parsley:Object type="{ RemoteObjectStub }">
+			<parsley:Property name="delay" value="250" />
+		</parsley:Object>
+						
+	</fx:Declarations>
+	
+</parsley:Objects>

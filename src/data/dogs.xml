@@ -1,0 +1,32 @@
+<Dogs>
+	<Dog
+        name="Lola"
+        breed="Black Labrador"
+        image="https://lh5.googleusercontent.com/-rhjdksWZx2k/TYktNHQ3BiI/AAAAAAAAAwE/MH1aQHcdPoc/s1152/Puppy-eyes.JPG"
+        owner="Mickey Monkey"
+        />
+    <Dog
+        name="Gary"
+        breed="Greyhound"
+        image="https://lh6.googleusercontent.com/-VtfYSFWjg-A/TNhxBbCQI0I/AAAAAAAAAi0/VhnFo_VBI4g/s1152/IMG_6421.JPG"
+        owner="Mickey Monkey"
+        />
+    <Dog
+        name="Barney"
+        breed="Golden Retriever"
+        image="https://lh4.googleusercontent.com/-tR1WtE-oy_4/TSJKUpyn3iI/AAAAAAAAAqE/uRzWlcIuVbY/s1152/IMG_8701.JPG"
+        owner="Harold Horse"
+        />
+    <Dog
+        name="Jack"
+        breed="Jack Russell"
+        image="https://lh3.googleusercontent.com/-8WjsCe95tBE/TNhypQQ9TdI/AAAAAAAAAjw/6VRuvwNZRXE/s912/IMG_6507.JPG"
+        owner="Daisy The Cow"
+        />
+    <Dog
+        name="Joe"
+        breed="French Bulldog"
+        image="https://lh6.googleusercontent.com/-ZFY2KpuzLdo/TSJJUTeWNqI/AAAAAAAAAo0/VAa4NHeGadg/s1152/IMG_8932.JPG"
+        owner="Daisy The Cow"
+        />
+</Dogs>

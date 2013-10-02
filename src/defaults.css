@@ -1,0 +1,15 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace view "com.chappell.view.*";
+
+s|Label
+{
+	fontFamily : Helvetica;
+	fontSize : 12;
+}
+
+view|GenericListView
+{
+	skinClass: ClassReference("com.chappell.view.skins.GenericListViewSkin");
+}

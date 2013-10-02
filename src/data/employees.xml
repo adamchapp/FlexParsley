@@ -1,0 +1,27 @@
+<Employees>
+	<Employee
+        name="Mickey Monkey"
+        role="Actor"
+        image="https://lh4.googleusercontent.com/-lT6KlAIsOTw/TFVo3OsOfsI/AAAAAAAAAU8/viGEaw22z7w/s1152/IMG_2672.JPG"
+		/>
+    <Employee
+        name="Harold Horse"
+        role="Developer"
+        image="https://lh5.googleusercontent.com/-upVkOEDB-FQ/TNhyspiumFI/AAAAAAAAAj0/RMmt5xCcku0/s1152/IMG_6515.JPG"
+        />
+    <Employee
+        name="Country Gent"
+        role="Cleaner"
+        image="https://lh5.googleusercontent.com/-meZYIg4Pf3k/TSJKgb7VF2I/AAAAAAAAAqU/JIHozpI7VUw/s720/IMG_8758.JPG"
+        />
+    <Employee
+        name="Harriet Hat Wearer"
+        role="Hat Model"
+        image="https://lh5.googleusercontent.com/-KQEkkiORCFE/TSJKxCSK0JI/AAAAAAAAAqs/SbYDgwGJRj8/s1152/IMG_8464.JPG"
+        />
+    <Employee
+        name="Daisy The Cow"
+        role="Milk Machine"
+        image="https://lh3.googleusercontent.com/-td3HQxVDCy4/TSJKPzYNt0I/AAAAAAAAAp4/pQ1pSAGohbA/s1152/IMG_9050.JPG"
+        />
+</Employees>
